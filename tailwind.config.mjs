@@ -19,6 +19,10 @@ export default {
 			fontFamily: {
 				'fraunces': ['Fraunces', 'sans-serif'],
 				'barlow': ['Barlow', 'sans-serif']
+			},
+
+			letterSpacing: {
+				'superwidest': '10px'
 			}
 		},
 	},
