@@ -13,7 +13,8 @@ export default {
 				'Very-dark-grayish-blue': 'hsl(213, 9%, 39%)',
 				'Dark-grayish-blue': 'hsl(232, 10%, 55%)',
 				'Grayish-blue': 'hsl(210, 4%, 67%)',
-				'White': 'hsl(0, 0%, 100%)'
+				'White': 'hsl(0, 0%, 100%)',
+				'white-transparent': 'rgba(255, 255, 255, 0.5)'
 			},
 
 			fontFamily: {

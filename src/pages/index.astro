@@ -5,6 +5,7 @@ import { Image } from 'astro:assets';
 import arrowDown from '../images/icon-arrow-down.svg';
 import eggImage from '../images/image-transform.jpg';
 import Card1 from '../components/Card1.astro';
+import redCup from '../images/image-stand-out.jpg';
 ---
 
 <Layout title="Sunny side">
@@ -23,6 +24,13 @@ import Card1 from '../components/Card1.astro';
 			title='Transform your brand' 
 			paragrap='Engage your clients through compelling visuals that do most of the marketing for you.' 
 			rowReverse={true}
+	/>
+
+	<Card1 image={redCup}
+			alt='cup'
+			title='Stand out to the right audience'
+			paragrap="Using collavorative formula of designers, researchers photographers, videographers and copywriters, we´ll build and extend your brand in digital places."
+			rowReverse={false}
 	/>
 
 </Layout>

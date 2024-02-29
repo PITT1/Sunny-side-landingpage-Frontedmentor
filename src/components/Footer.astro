@@ -1,0 +1,32 @@
+---
+import Image from 'astro/components/Image.astro';
+import facebookIcon from '../images/icon-facebook.svg';
+import instagramIcon from '../images/icon-instagram.svg';
+import twitterIcon from '../images/icon-twitter.svg';
+import pinterestIcon from '../images/icon-pinterest.svg';
+---
+
+<footer class=" w-screen h-auto bg-emerald-200">
+    <section class=" mx-auto text-center box-border max-w-80">
+        <h1 class=" pt-12 font-barlow text-4xl font-black text-Very-dark-desaturated-blue">sunnyside</h1>
+        <ul class=" flex justify-around mt-10 font-barlow font-bold text-Dark-moderate text-lg">
+            <li><a href="#">About</a></li>
+            <li><a href="#">Services</a></li>
+            <li><a href="#">Projects</a></li>
+        </ul>
+        <div class=" flex py-20 justify-around w-3/4 mx-auto">
+            <a href="#">
+                <Image src={facebookIcon} alt="facebook link"/>
+            </a>
+            <a href="#">
+                <Image src={instagramIcon} alt="instagram link"/>
+            </a>
+            <a href="#">
+                <Image src={twitterIcon} alt="twitter link"/>
+            </a>
+            <a href="#">
+                <Image src={pinterestIcon} alt="pinterest link"/>
+            </a>
+        </div>
+    </section>
+</footer>
