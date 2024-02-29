@@ -1,11 +1,20 @@
 ---
+import Image from 'astro/components/Image.astro'
+import type { ImageFunction } from 'astro:content';
+interface Props {
+    image: ImageMetadata,
+    alt: string,
+    title: string,
+    paragrap: string,
+    rowReverse: boolean
+}
 const { image, alt, title, paragrap, rowReverse} = Astro.props;
 ---
 
 <section>
     <div class={rowReverse ? "h-screen w-full flex flex-col sm:h-4/5 sm:flex-row-reverse": "h-screen w-full flex flex-col sm:h-4/5 sm:flex-row"}>
         <div class=" sm:w-1/2">
-            <img class=' object-cover h-full' src={image} alt={alt}/>
+            <Image class=' object-cover h-full' src={image} alt={alt}/>
         </div>
         <article class=" sm:my-auto h-full w-full my-10 flex flex-col justify-around text-center sm:text-start sm:w-1/2">
             <div class="sm:m-20 h-full">
