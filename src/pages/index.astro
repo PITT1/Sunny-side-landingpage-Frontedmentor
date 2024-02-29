@@ -18,15 +18,19 @@ import eggImage from '../images/image-transform.jpg';
 	</main>
 
 	<section>
-		<div class=" h-screen w-full flex flex-col sm:flex-row">
-			<Image class=' ' src={eggImage} alt='egg'/>
-			<article class=" h-full w-full my-10 flex flex-col justify-around text-center">
-				<h2 class=" font-fraunces font-black text-3xl text-Very-dark-desaturated-blue">Transform your <br/> brand</h2>
-				<p class=" font-barlow font-semibold text-lg mx-5 text-Grayish-blue">We are a full-service creative agency specializing in helping brands grow fast.
+		<div class=" h-screen w-full flex flex-col sm:h-4/5 sm:flex-row-reverse">
+			<div class=" sm:w-1/2">
+				<Image class=' object-cover h-full' src={eggImage} alt='egg'/>
+			</div>
+			<article class=" sm:my-auto h-full w-full my-10 flex flex-col justify-around text-center sm:text-start sm:w-1/2">
+				<div class="sm:m-20 h-full">
+					<h2 class=" font-fraunces font-black text-3xl text-Very-dark-desaturated-blue sm:mb-6">Transform your <br/> brand</h2>
+					<p class=" font-barlow font-semibold text-lg sm:text-sm mx-5 sm:mx-0 sm:mb-6 text-Grayish-blue">We are a full-service creative agency specializing in helping brands grow fast.
 					Engage your clients through compelling visuals that do most of the
 					marketing for you.
-				</p>
-				<a class=" relative before:top-3/4 before:rounded-full before:absolute before:h-3 before:w-full before:bg-yellow-200 font-fraunces font-black text-Very-dark-desaturated-blue w-1/3 mx-auto" href="#">LEARN MORE</a>
+					</p>
+					<a class=" relative before:top-3/4 before:rounded-full before:absolute before:h-3 before:w-full before:bg-yellow-200 font-fraunces font-black text-Very-dark-desaturated-blue w-1/3 mx-auto" href="#">LEARN MORE</a>
+				</div>
 			</article>
 		</div>
 	</section>
