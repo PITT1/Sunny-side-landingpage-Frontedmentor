@@ -12,11 +12,11 @@ interface Props {
 const { avatar, alt, paragrap, name, ocupation } = Astro.props;
 ---
 
-<div class=" h-96 w-auto text-center mx-5 max-w-80">
+<div class=" h-96 w-auto text-center mx-auto sm:mx-5 max-w-80">
     <div class=" h-20 w-20 rounded-full overflow-hidden mx-auto">
         <Image src={avatar} alt={alt}/>
     </div>
     <p class=" font-barlow font-semibold my-8 text-lg text-Very-dark-grayish-blue">{paragrap}</p>
     <h2 class=" font-fraunces font-black text-xl text-Very-dark-desaturated-blue">{name}</h2>
-    <p class=" font-barlow font-semibold text-base py-3 text-Grayish-blue">{ocupation}</p>
+    <p class=" font-barlow font-semibold text-base pt-3 pb-8 text-Grayish-blue">{ocupation}</p>
 </div>

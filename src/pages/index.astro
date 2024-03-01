@@ -10,6 +10,10 @@ import ClientCard from '../components/ClientCard.astro';
 import emily from '../images/image-emily.jpg';
 import thomas from '../images/image-thomas.jpg';
 import jennie from '../images/image-jennie.jpg';
+import milkbottles from '../images/image-gallery-milkbottles.jpg';
+import orangegallery from '../images/image-gallery-orange.jpg';
+import cone from '../images/image-gallery-cone.jpg';
+import sugarcubes from '../images/image-gallery-sugarcubes.jpg';
 ---
 
 <Layout title="Sunny side">
@@ -48,22 +52,22 @@ import jennie from '../images/image-jennie.jpg';
 		</div>
 	</section>
 
-	<section>
+	<section class="h-auto">
 		<h2 class=" mx-auto text-center font-fraunces font-black text-Grayish-blue py-14 tracking-mediumwidest">CLIENT TESTIMONIALS</h2>
-		<div class=" sm:flex sm:justify-center">
+		<div class=" h-auto sm:flex sm:justify-center">
 			<ClientCard avatar={emily}
 					alt='avatar emily'
 					paragrap='We put our trust in sunnyside and they delivered, making sure our needs were met and deadlines were always hit.'
 					name='Emily R.'
 					ocupation='Marketing Director'/>
 
-		<ClientCard avatar={thomas}
+			<ClientCard avatar={thomas}
 					alt='avatar thomas'
 					paragrap="sunnysides´s enthusiasm coupled with their keen interest in our brand´s success made it a satisfying enjoyable experience."
 					name='Thomas S.'
 					ocupation='Chief Operating officer'/>
 
-		<ClientCard avatar={jennie}
+			<ClientCard avatar={jennie}
 					alt='avatar jennie'
 					paragrap='incredible end result! Our sales increased over 400% when we worked with Sunnyside. Highly recommended!'
 					name='Jennie F.'
@@ -71,6 +75,20 @@ import jennie from '../images/image-jennie.jpg';
 		</div>
 	</section>
 
+	<section class=" w-screen h-auto grid grid-cols-2 grid-rows-2 sm:flex">
+		<div>
+			<Image class=' aspect-square sm:aspect-auto' src={milkbottles} alt='milk bottles'/>
+		</div>
+		<div>
+			<Image class=' aspect-square sm:aspect-auto' src={orangegallery} alt='oranges'/>
+		</div>
+		<div>
+			<Image class=' aspect-square sm:aspect-auto' src={cone} alt='cone ice cream'/>
+		</div>
+		<div>
+			<Image class=' aspect-square sm:aspect-auto' src={sugarcubes} alt='sugar cubes'/>
+		</div>
+	</section>
 </Layout>
 
 <style>
