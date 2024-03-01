@@ -6,6 +6,8 @@ import arrowDown from '../images/icon-arrow-down.svg';
 import eggImage from '../images/image-transform.jpg';
 import Card1 from '../components/Card1.astro';
 import redCup from '../images/image-stand-out.jpg';
+import ClientCard from '../components/ClientCard.astro';
+import emily from '../images/image-emily.jpg';
 ---
 
 <Layout title="Sunny side">
@@ -33,11 +35,39 @@ import redCup from '../images/image-stand-out.jpg';
 			rowReverse={false}
 	/>
 
+	<section class=" h-auto flex flex-col sm:flex-row ">
+		<div class=" cherries bg-cover bg-center h-screen sm:h-h-100 w-full flex flex-col justify-end align-middle">
+			<h1 class=" font-fraunces font-black text-center text-3xl text-Dark-desaturated-cyan">Grapic Design</h1>
+			<p class=" font-barlow mb-16 mt-5 mx-5 text-center font-semibold text-Dark-desaturated-cyan">Great design makes you memorable. We deliver artwork that underscores your brand messages and capture potential clients' attention</p>
+		</div>
+		<div class=" oranges bg-cover bg-center h-screen sm:h-h-100 w-full flex flex-col justify-end align-middle">
+			<h1 class=" font-fraunces font-black text-center text-3xl text-Dark-desaturated-cyan">Photography</h1>
+			<p class=" font-barlow mb-16 mt-5 mx-5 text-center font-semibold text-Dark-desaturated-cyan">Increase your credibility by getting the most stunning, high-quality photos that improve your business image.</p>
+		</div>
+	</section>
+
+	<section>
+		<h2 class=" mx-auto text-center font-fraunces font-black text-Grayish-blue py-14 tracking-mediumwidest">CLIENT TESTIMONIALS</h2>
+		<ClientCard avatar={emily}
+					alt='avatar emily'
+					paragrap='We put our trust in sunnyside and they delivered, making sure our needs were met and deadlines were always hit.'
+					name='Emily R.'
+					ocupation='Marketing Director'/>
+	</section>
+
 </Layout>
 
 <style>
 	main {
 		background-image: url(../images/image-header.jpg);
+	}
+
+	.cherries {
+		background-image: url(../images/image-graphic-design.jpg);
+	}
+
+	.oranges {
+		background-image: url(../images/image-photography.jpg);
 	}
 </style>
 

@@ -23,7 +23,12 @@ export default {
 			},
 
 			letterSpacing: {
-				'superwidest': '10px'
+				'superwidest': '10px',
+				'mediumwidest': '5px'
+			},
+
+			height: {
+				'h-100': '32rem'
 			}
 		},
 	},
