@@ -8,6 +8,8 @@ import Card1 from '../components/Card1.astro';
 import redCup from '../images/image-stand-out.jpg';
 import ClientCard from '../components/ClientCard.astro';
 import emily from '../images/image-emily.jpg';
+import thomas from '../images/image-thomas.jpg';
+import jennie from '../images/image-jennie.jpg';
 ---
 
 <Layout title="Sunny side">
@@ -48,13 +50,25 @@ import emily from '../images/image-emily.jpg';
 
 	<section>
 		<h2 class=" mx-auto text-center font-fraunces font-black text-Grayish-blue py-14 tracking-mediumwidest">CLIENT TESTIMONIALS</h2>
-		<ClientCard avatar={emily}
+		<div class=" sm:flex sm:justify-center">
+			<ClientCard avatar={emily}
 					alt='avatar emily'
 					paragrap='We put our trust in sunnyside and they delivered, making sure our needs were met and deadlines were always hit.'
 					name='Emily R.'
 					ocupation='Marketing Director'/>
 
-		<ClientCard avatar={}/>
+		<ClientCard avatar={thomas}
+					alt='avatar thomas'
+					paragrap="sunnysides´s enthusiasm coupled with their keen interest in our brand´s success made it a satisfying enjoyable experience."
+					name='Thomas S.'
+					ocupation='Chief Operating officer'/>
+
+		<ClientCard avatar={jennie}
+					alt='avatar jennie'
+					paragrap='incredible end result! Our sales increased over 400% when we worked with Sunnyside. Highly recommended!'
+					name='Jennie F.'
+					ocupation='Business Owner'/>
+		</div>
 	</section>
 
 </Layout>
