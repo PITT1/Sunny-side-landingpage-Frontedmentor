@@ -2,21 +2,21 @@
 
 ---
 
-<header class=" flex align-middle justify-between h-auto w-full py-6 bg-transparent text-white font-barlow font-semibold">
+<header class=" relative flex align-middle justify-between h-auto w-full py-6 bg-transparent text-white font-barlow font-semibold">
     <div class=" flex align-middle">
         <a class=" px-8 py-3 text-3xl font-barlow font-black" href="#">sunnyside</a>
     </div>
 
-    <div class="hidden sm:block">
-        <ul class=" flex gap-2 mx-5 py-6">
-            <li><a class=" transition-all px-5 py-3 rounded-full hover:bg-white-transparent focus:bg-white focus:text-Very-dark-desaturated-blue" href="#">About</a></li>
-            <li><a class=" transition-all px-5 py-3 rounded-full hover:bg-white-transparent focus:bg-white focus:text-Very-dark-desaturated-blue" href="#">Services</a></li>
-            <li><a class=" transition-all px-5 py-3 rounded-full hover:bg-white-transparent focus:bg-white focus:text-Very-dark-desaturated-blue" href="#">Projects</a></li>
-            <li><a class=" transition-all px-5 py-3 rounded-full hover:bg-white-transparent focus:bg-white focus:text-Very-dark-desaturated-blue" href="#">Contact</a></li>
+    <div class=" dropdown absolute left-0 top-full w-screen sm:w-auto hidden sm:block sm:relative transition-all">
+        <ul class=" clippy text-center sm:text-left h-auto w-60 sm:w-auto mx-auto sm:flex sm:gap-2 sm:mx-5 py-6 text-Very-dark-grayish-blue sm:text-white">
+            <li class=" pt-10 sm:pt-0 pb-5 sm:pb-0"><a class=" hover:bg-Yellow hover:text-black text-2xl sm:text-base transition-all px-7 sm:px-5 py-3 rounded-full sm:hover:bg-white-transparent sm:focus:bg-white sm:focus:text-Very-dark-desaturated-blue" href="#">About</a></li>
+            <li class=" py-5 sm:py-0"><a class=" hover:bg-Yellow hover:text-black text-2xl sm:text-base transition-all px-7 sm:px-5 py-3 rounded-full sm:hover:bg-white-transparent sm:focus:bg-white sm:focus:text-Very-dark-desaturated-blue" href="#">Services</a></li>
+            <li class=" py-5 sm:py-0"><a class=" hover:bg-Yellow hover:text-black text-2xl sm:text-base transition-all px-7 sm:px-5 py-3 rounded-full sm:hover:bg-white-transparent sm:focus:bg-white sm:focus:text-Very-dark-desaturated-blue" href="#">Projects</a></li>
+            <li class=" py-5 sm:py-0"><a class=" hover:bg-Yellow hover:text-black text-2xl sm:text-base transition-all px-7 sm:px-5 py-3 rounded-full sm:hover:bg-white-transparent sm:focus:bg-white sm:focus:text-Very-dark-desaturated-blue font-fraunces" href="#">CONTACT</a></li>
         </ul>
     </div>
 
-    <div class="flex align-middle justify-center sm:hidden px-8 py-3">
+    <div class=" hamburguer flex align-middle justify-center sm:hidden px-8 py-3">
         <button>
             <svg width="24" height="18" xmlns="http://www.w3.org/2000/svg">
                 <path d="M24 16v2H0v-2h24zm0-8v2H0V8h24zm0-8v2H0V0h24z" fill="#FFF" fill-rule="evenodd"/>
@@ -24,3 +24,29 @@
         </button>
     </div>
 </header>
+
+<style>
+    .dropdown {
+        clip-path: polygon(26% 10%, 80% 10%, 90% 0, 90% 100%, 9% 100%, 8% 10%);
+        background-color: white;
+    }
+
+    @media (min-width: 640px) {
+        .dropdown {
+            clip-path: none;
+            background: transparent;
+        }
+    }
+</style>
+
+<script>
+    const hamburguer = document.querySelector('.hamburguer');
+    const dropdown = document.querySelector('.dropdown');
+    hamburguer.addEventListener('click', () => {
+    if (dropdown.classList.contains('hidden')) {
+        dropdown.classList.replace('hidden', 'visible');
+    } else if (dropdown.classList.contains('visible')) {
+        dropdown.classList.replace('visible', 'hidden');
+    }
+});
+</script>
