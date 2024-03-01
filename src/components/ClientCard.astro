@@ -12,7 +12,7 @@ interface Props {
 const { avatar, alt, paragrap, name, ocupation } = Astro.props;
 ---
 
-<div class=" h-96 w-auto text-center mx-5">
+<div class=" h-96 w-auto text-center mx-5 max-w-80">
     <div class=" h-20 w-20 rounded-full overflow-hidden mx-auto">
         <Image src={avatar} alt={alt}/>
     </div>
